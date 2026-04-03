@@ -1,6 +1,6 @@
 # Black Books & Ledgers
 
-Initial marketing site for Jessica LaCario and `blackbooksandledgers.com`.
+Initial marketing site for Jessica LaCario and `blackbooksandledgers.com`, prepared for Cloudflare Workers Builds.
 
 ## Project structure
 
