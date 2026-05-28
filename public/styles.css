@@ -128,16 +128,18 @@ a {
   margin: 0;
   font-family: var(--display-font);
   font-weight: 700;
+  hyphens: none;
   line-height: 1.02;
 }
 
 .hero-copy h1 {
   font-size: clamp(2.9rem, 6vw, 5.4rem);
-  max-width: 12.5ch;
+  max-width: 15ch;
 }
 
 .hero-copy h1 span {
   display: block;
+  white-space: nowrap;
 }
 
 .lead,
@@ -262,7 +264,7 @@ a {
 }
 
 #services .section-heading h2 {
-  max-width: 22ch;
+  max-width: 26ch;
 }
 
 .service-grid,
