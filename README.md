@@ -1,6 +1,6 @@
 # Black Books & Ledgers
 
-Marketing site for Black Books & Ledgers and `blackbooksandledgers.com`, prepared for Cloudflare Workers Builds.
+Marketing site for Black Books & Ledgers and `blackbooksandledgers.com`, deployed to Cloudflare Workers.
 
 ## Project structure
 
@@ -14,25 +14,21 @@ Marketing site for Black Books & Ledgers and `blackbooksandledgers.com`, prepare
 2. Run `npm run dev`.
 3. Wrangler will serve the site locally using the `public/` directory.
 
-## Deploying with Wrangler
+## Deploying
 
-1. Authenticate Wrangler with `npx wrangler login`.
-2. Run `npm run deploy`.
-3. Wrangler will deploy the contents of `public/` to the existing Worker named `blackbooksandledgers`.
+Pushing to the `main` branch runs the GitHub Actions deploy workflow in `.github/workflows/deploy.yml`.
+The workflow installs dependencies and runs `npm exec -- wrangler deploy`, which deploys the contents of
+`public/` to the existing Worker named `blackbooksandledgers`.
 
-The Worker name in `wrangler.jsonc` intentionally matches the existing Cloudflare project so Workers Builds can connect cleanly.
+The repository must have a GitHub secret named `CLOUDFLARE_API_TOKEN` with permission to deploy the Worker.
 
-## Connecting GitHub to Cloudflare Workers Builds
+## Manual deploy
 
-1. Push this repository to GitHub.
-2. In Cloudflare, open the `blackbooksandledgers` Worker.
-3. Go to `Settings` -> `Builds`.
-4. Connect the GitHub repository.
-5. Set the production branch to `main`.
-6. Leave the build command blank.
-7. Set the deploy command to `npm run deploy`.
+1. Authenticate Wrangler with `npx wrangler login` or set `CLOUDFLARE_API_TOKEN`.
+2. Run `npm install` if dependencies are not installed.
+3. Run `npm run deploy`.
 
-Cloudflare's current docs note that the Worker name in the dashboard must match the `name` field in `wrangler.jsonc`, or the build will fail.
+The Worker name in `wrangler.jsonc` intentionally matches the existing Cloudflare Worker.
 
 ## Notes for the next pass
 
