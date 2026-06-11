@@ -208,9 +208,32 @@ a {
 }
 
 .fact-list,
-.timeline {
+.timeline,
+.tag-list {
   margin: 0;
+}
+
+.fact-list,
+.timeline {
   padding-left: 1.1rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 0.55rem;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.25;
 }
 
 .fact-list li,

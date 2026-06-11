@@ -1,6 +1,6 @@
 # Black Books & Ledgers
 
-Initial marketing site for Jessica LaCario and `blackbooksandledgers.com`, prepared for Cloudflare Workers Builds.
+Marketing site for Black Books & Ledgers and `blackbooksandledgers.com`, prepared for Cloudflare Workers Builds.
 
 ## Project structure
 
@@ -36,6 +36,6 @@ Cloudflare's current docs note that the Worker name in the dashboard must match 
 
 ## Notes for the next pass
 
-- Replace broad service wording with Jessica's final service list and niche.
-- Add a form or scheduling link only if she wants a stronger lead capture flow.
-- If Jessica later wants full mailbox sending from the domain, move to Google Workspace or add a dedicated outbound SMTP provider.
+- Keep service wording aligned with the business-centered service list and client experience.
+- Add a form or scheduling link only if the business wants a stronger lead capture flow.
+- If the business later wants full mailbox sending from the domain, move to Google Workspace or add a dedicated outbound SMTP provider.
